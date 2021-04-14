@@ -1,0 +1,133 @@
+<!DOCTYPE hmtml>
+<html>
+
+    <head>
+        <title>Serious Developers</title>
+        <link rel="stylesheet" href="style/global.css">
+        <link rel="stylesheet" href="style/review.css">
+    </head>
+
+    <body>        
+        <header>
+
+        </header>
+    
+        <div class="content">
+            <div class ="top">
+                <div class="name-rating">
+                    <div class="name"> <strong> Grand Theft Auto </strong></div>
+                    <div class="rating"> Rate: 5/5 </div>
+                </div>
+
+                <div class="game-photo">
+                    <img src="./images/random.jpg" alt="Game Profile Pic" height="350">
+                </div>
+            </div>
+
+            <!-- <div class="slider-container">
+                <ul class="slider">
+                    <li> 
+                    <input type="radio" id="slide1" name="slide" checked>
+                    <label for="slide1"></label>
+                    <img src="images/user.png"> 
+                </li> 
+        
+                <li> 
+                    <input type="radio" id="slide2" name="slide"> 
+                    <label for="slide2"></label> 
+                    <img src="images/random.jpg"> 
+                </li>
+
+                <li> 
+                    <input type="radio" id="slide3" name="slide"> 
+                    <label for="slide3"></label> 
+                    <img src="images/user.png"> 
+                </li>
+
+                <li> 
+                    <input type="radio" id="slide4" name="slide"> 
+                    <label for="slide4"></label> 
+                    <img src="images/random.jpg"> 
+                </li>
+                </ul>
+            </div> -->
+
+
+            <div class="slider-container">
+                <div>
+                    <ul class="slides">
+                    <li id="slide1"><img src="./images/random.jpg" alt="" /></li>
+                    <li id="slide2"><img src="./images/gta1.jpeg" alt="" /></li>
+                    <li id="slide3"><img src="./images/gta2.jpeg" alt="" /></li>
+                    <li id="slide4"><img src="./images/gta3.pjeg.jpg" alt="" /></li>
+                    <li id="slide5"><img src="./images/gta4.jpeg" alt="" /></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="thumbnails">
+                    <li>
+                        <a href="#slide1"><img src="./images/random.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href="#slide2"><img src="./images/gta1.jpeg" /></a>
+                    </li>
+                    <li>
+                        <a href="#slide3"><img src="./images/gta2.jpeg" /></a>
+                    </li>
+                    <li>
+                        <a href="#slide4"><img src="./images/gta3.pjeg.jpg" /></a>
+                    </li>
+                    <li>
+                        <a href="#slide5"><img src="./images/gta4.jpeg" /></a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div id="comment_section">
+                <fieldset>
+                    <img src="images/user.png" alt="User photo" width="60" height="60">
+                    <textarea name="comment" id="comment" cols="150" rows="3" readonly="readonly"></textarea>
+                    <input type="file" name = "upload_file" multiple = "multiple">
+                    <input type="submit" name="post_comment" value = "POST" disabled>
+                </fieldset>
+            </div>
+
+            <nav class ="nav">
+                <div class = "items">
+                    <a class = "nav-link" href="home.html">HOME</a>
+                </div> 
+                
+                <div class = "items"> 
+                    <a class = "nav-link" href="myPage.html">MY PAGE</a>
+                </div> 
+
+                <div class = "items">
+                    <a class = "nav-link" href="bestSells.html">BEST SELLERS</a>
+                </div>   
+
+                <div class = "items">
+                    <div class = "nav-link">
+                        <div class="random-text">MORE</div>
+                        <ul class = "nav-link-submenu">
+
+                            <li class="nav-link-submenu-item">
+                                <a href="#" class="submenu-link">My Cart</a>
+                            </li>
+
+                            <li class="nav-link-submenu-item">
+                                <a href="index.html" class="submenu-link">Log out</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>  
+            </nav>
+        </div>
+
+        <footer>
+            Some sample text 
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style/login.css">
+        <title>Serious Developers</title>
+        <script src="https://kit.fontawesome.com/71307a101a.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body class="login-container">
+        <div class = "login-form">
+            <div class="btn-box">
+                <div class="button-holder" id="button-holder"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+                <button type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+
+            <div class="social-icons">
+                <i class="fab fa-facebook"></i>
+                <img src="images/facebook.png" alt="facebook-login" width="32" height="32">
+                <img src="images/google.png" alt="google-login" width="30" height="30">
+            </div>
+
+            <form id="login" class = "login-input">
+                <input type="text" class = "login-input-field" placeholder="User ID" required>
+                <input type="text" class = "login-input-field" placeholder="Password" required>
+                <input type="checkbox" class="check-box"> <span>Remember password?</span>
+                <button type="submit" class = "submit-btn">Login</button>
+                <a href="home.html">HOME</a>
+            </form> 
+
+            <form id="register" class = "login-input">
+                <input type="text" class = "login-input-field" placeholder="User ID" required>
+                <input type="text" class = "login-input-field" placeholder="Email" required>
+                <input type="text" class = "login-input-field" placeholder="Password" required>
+               
+                <select name="county" id="main_menu" class="custom-select">
+                    <option value="SM">Satu Mare</option>
+                    <option value="MM">Maramures</option>
+                    <option value="CJ">Cluj</option>
+                </select>
+
+                <select name="city" id="sub_menu" class="custom-select">
+
+                </select>
+                <br>
+                <input id="user_buyer" type="radio" class="check-box" name="usertype" checked="checked">Buyer
+                <input id="user_vendor" type="radio" class="check-box" name="usertype">Vendor
+                <br>
+                <input type="checkbox" class="check-box">I agree terms & conditions
+                <button type="submit" class = "submit-btn">Register</button>
+            </form>
+        </div>    
+
+        <script>
+            var btn_login = document.getElementById("login")
+            var btn_register = document.getElementById("register")
+            var btn_switch = document.getElementById("button-holder")
+
+            function register(){
+                btn_login.style.left = "-400px";
+                btn_register.style.left = "50px";
+                btn_switch.style.left = "110px";
+            }
+
+            function login(){
+                btn_login.style.left = "50px";
+                btn_register.style.left = "450px";
+                btn_switch.style.left = "0";
+            }
+        </script>
+        
+        <script>
+            var county={
+                    SM:['Satu Mare', 'Carei', 'Arad'],
+                    MM:['Baia Mare', 'Baba', 'Baia Sprie'],
+                    CJ:['Cluj Napoca', 'Baciu', 'Apahida']
+
+            }
+            var main= document.getElementById('main_menu')
+            var sub = document.getElementById('sub_menu')
+
+            main.addEventListener('change', function(){
+                var selected_option = county[this.value]
+                
+                while(sub.options.length > 0){
+                    sub.options.remove(0);
+                }
+
+                Array.from(selected_option).forEach(function(el){
+                    let option = new Option(el, el);
+                    sub.appendChild(option);
+                })
+            });
+        </script>
+    </body>
+</html>

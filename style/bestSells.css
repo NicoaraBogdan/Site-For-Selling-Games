@@ -1,0 +1,63 @@
+.table-container{
+    display: inline-block;
+    width: 80%;
+    background: white;  
+}
+
+.table-img{
+    width: 100px;
+    height: 100px;
+}
+
+.table-img:hover + .img-name-popup{
+    display: flex;
+}
+
+.img-name-popup{
+    width: 100%;
+    background: rgba(0,0,0,0.2);
+    display: none;
+    align-items: center;
+}
+
+table{
+    padding: 20px;
+    width: 100%;
+    border: 1px solid black
+}
+
+tr{
+    border-bottom: 1px solid;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+th, td{
+    display: flex;
+    width:100%;
+}
+
+.table-sortable{
+    cursor: pointer;
+}
+
+.table-sortable .th-sort-asc::after{
+    content: "\25b4";
+}
+
+.table-sortable .th-sort-desc::after{
+    content: "\25be";
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after{
+    margin-left: 5px;
+}
+
+.table-sortable .th-sort-asc,
+.table-sortable .th-sort-asc{
+    background: rgba(0,0,0, 0.1);
+}
+
