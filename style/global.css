@@ -113,3 +113,15 @@ a{
     font-size: 20px;
     color: rgba(0,0,0,1);
 }
+
+.error{
+    background: rgb(190, 186, 186);
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.error p{
+    color: rgb(168, 11, 11);
+    padding-left: 15px;
+    padding-right: 15px;
+}
